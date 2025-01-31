@@ -43,7 +43,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
 }
 
 main {
@@ -75,17 +75,23 @@ button:hover {
 }
 
 nav {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
-a {
-    text-decoration: none;
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
     padding: 0.5rem;
     padding-bottom: 1.25rem;
     color: var(--dark-grayish-blue);
+    cursor: pointer;
 }
 
-a:hover {
+li:hover {
     border-bottom: 0.5rem solid var(--orange);
 }
 
@@ -162,7 +168,7 @@ a:hover {
 }
 
 .modal {
-    display: none;
+  display: none;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -394,11 +400,10 @@ a:hover {
     }
 
     ul {
-        display: flex;
         flex-direction: column;
     }
 
-    a {
+    li {
         color: var(--very-dark-blue);
     }
 
