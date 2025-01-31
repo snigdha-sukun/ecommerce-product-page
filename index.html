@@ -7,48 +7,209 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
+  <header>
+    <div class="header">
+      <div class="mobile_menu" id="menu_hamburger" aria-label="Menu">
+        <img src="./images/icon-menu.svg" alt="menu" />
+      </div>
+      <div>
+        <img src="./images/logo.svg" alt="logo" class="logo">
+      </div>
+      <nav id="nav_menu">
+        <div class="close_menu" id="close_menu" aria-label="Close Menu">
+          <img src="./images/icon-close.svg" alt="close" />
+        </div>
+        <ul>
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </ul>
+      </nav>
+    </div>
+    <div class="header">
+      <div class="dropdown">
+        <div id="cartBtn" class="cart">
+          <img src="./images/icon-cart.svg" alt="cart">
+        </div>
+        <div id="myDropdown" class="dropdown-content">
+          <h4 class="cart-header">Cart</h4>
+          <hr />
+          <div class="cart-items">
+            <div class="empty-cart" id="empty-cart">
+              <p>Your cart is empty.</p>
+            </div>
+            <div class="full-cart" id="full-cart">
+              <div class="cart-item">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="product-1-thumbnail" height="40">
+                <div class="cart-item-details">
+                  <p>Fall Limited Edition Sneakers</p>
+                  <p>$125.00 x <span id="qty">1</span> <span class="total" id="total">$125.00</span></p>
+                </div>
+                <div class="cart-item-remove" id="remove-item">
+                  <img src="./images/icon-delete.svg" alt="delete" height="20">
+                </div>
+              </div>
+              <button class="checkout">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="avatar">
+        <img src="./images/image-avatar.png" alt="avatar" height="40">
+      </div>
+    </div>
+  </header>
+  <hr />
+  <main>
+    <section class="container">
+      <div class="product-images">
+        <img src="./images/image-product-1.jpg" alt="product-1" class="product-img">
+      </div>
+      <div class="row">
+        <div class="column">
+          <img class="thumb cursor active" src="./images/image-product-1-thumbnail.jpg" width="60%" height="60%"
+            alt="product-1-thumbnail">
+        </div>
+        <div class="column">
+          <img class="thumb cursor" src="./images/image-product-2-thumbnail.jpg" width="60%" alt="product-2-thumbnail">
+        </div>
+        <div class="column">
+          <img class="thumb cursor" src="./images/image-product-3-thumbnail.jpg" width="60%" alt="product-3-thumbnail">
+        </div>
+        <div class="column">
+          <img class="thumb cursor" src="./images/image-product-4-thumbnail.jpg" width="60%" alt="product-4-thumbnail">
+        </div>
+      </div>
+    </section>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <section class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close cursor" id="close-modal">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#fff" fill-rule="evenodd" />
+          </svg>
+        </span>
 
-  Sneaker Company
+        <div class="modal-slides">
+          <span class="prev" id="prev"><img src="./images/icon-previous.svg" alt="prev" /></span>
+          <div class="mySlides modal-images">
+            <img src="./images/image-product-1.jpg" alt="product-1" width="50%" class="modal-img">
+          </div>
 
-  Fall Limited Edition Sneakers
+          <div class="mySlides modal-images">
+            <img src="./images/image-product-2.jpg" alt="product-2" width="50%" class="modal-img">
+          </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+          <div class="mySlides modal-images">
+            <img src="./images/image-product-3.jpg" alt="product-3" width="50%" class="modal-img">
+          </div>
 
-  $125.00
-  50%
-  $250.00
+          <div class="mySlides modal-images">
+            <img src="./images/image-product-4.jpg" alt="product-4" width="50%" class="modal-img">
+          </div>
 
-  0
-  Add to cart
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <span class="next" id="next"><img src="./images/icon-next.svg" alt="next" /></span>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img class="thumb demo" src="./images/image-product-1-thumbnail.jpg" width="60%" alt="product-1-thumbnail">
+          </div>
+          <div class="column">
+            <img class="thumb demo" src="./images/image-product-2-thumbnail.jpg" width="60%" alt="product-2-thumbnail">
+          </div>
+          <div class="column">
+            <img class="thumb demo" src="./images/image-product-3-thumbnail.jpg" width="60%" alt="product-3-thumbnail">
+          </div>
+          <div class="column">
+            <img class="thumb demo" src="./images/image-product-4-thumbnail.jpg" width="60%" alt="product-4-thumbnail">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slideshow">
+      <span class="prev prev-mobile" id="prev-mobile"><img src="./images/icon-previous.svg" alt="prev" /></span>
+      <div class="slide">
+        <img src="./images/image-product-1.jpg" alt="product-1" width="100%">
+      </div>
+
+      <div class="slide">
+        <img src="./images/image-product-2.jpg" alt="product-2" width="100%">
+      </div>
+
+      <div class="slide">
+        <img src="./images/image-product-3.jpg" alt="product-3" width="100%">
+      </div>
+
+      <div class="slide">
+        <img src="./images/image-product-4.jpg" alt="product-4" width="100%">
+      </div>
+
+      <span class="next next-mobile" id="next-mobile"><img src="./images/icon-next.svg" alt="next" /></span>
+    </section>
+
+    <section aria-labelledby="sneaker-label" class="product-details">
+
+      <p class="company-name">SNEAKER COMPANY</p>
+
+      <h1 id="sneaker-label">Fall Limited Edition Sneakers</h1>
+
+      <p class="description">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+
+      <div class="new-price">
+        <h2>$125.00</h2><span>50%</span>
+      </div>
+      <s>$250.00</s>
+
+      <div class="btn">
+        <div class="quantity">
+          <div class="quantity-btn" id="decrement">
+            <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <path
+                  d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                  id="a" />
+              </defs>
+              <use class="quantity-svg" fill-rule="nonzero" xlink:href="#a" />
+            </svg>
+          </div>
+          <span class="selected-amount" id="amount">0</span>
+          <div class="quantity-btn" id="increment">
+            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <path
+                  d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                  id="b" />
+              </defs>
+              <use class="quantity-svg" fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+            </svg>
+          </div>
+        </div>
+        <button id="add-to-cart-btn"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path fill="hsl(220, 13%, 13%)"
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill-rule="nonzero" />
+          </svg><span> Add to cart</span></button>
+      </div>
+    </section>
+
+  </main>
 </body>
 
 </html>
